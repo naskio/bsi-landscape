@@ -35,7 +35,7 @@ url: https://naskio.github.io
 # landscape is prepared to be hosted at the root of the domain. However, if the
 # landscape will be hosted in a subpath, this value must be set accordingly.
 #
-base_path: /bsi-landscape
+# base_path: /bsi-landscape # uncomment this line to deploy to GitHub Pages (⚠ embedding not working on subpath)
 
 # Categories (optional)
 #
