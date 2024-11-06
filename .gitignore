@@ -1,22 +1,29 @@
-# Mac files
+# macOS system files
 .DS_Store
 
-# IDEA/Webstorm project files
+# JetBrains
 .idea
 *.iml
 
-# VSCode metadata
+# VSCode
 .vscode
 
-# VIM swap files
+# VIM
 *.swp
 
-# misc
-logs
+# logging
 *.log*
-tmp
+logs
+
+# Dependency directories
 node_modules
 
-#dist folder
+# Build folders
 dist
 build
+
+# Temporary files
+tmp
+*.tmp
+tmp.*
+*.tmp.*
