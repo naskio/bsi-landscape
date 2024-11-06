@@ -1,0 +1,22 @@
+# Mac files
+.DS_Store
+
+# IDEA/Webstorm project files
+.idea
+*.iml
+
+# VSCode metadata
+.vscode
+
+# VIM swap files
+*.swp
+
+# misc
+logs
+*.log*
+tmp
+node_modules
+
+#dist folder
+dist
+build
