@@ -45,6 +45,9 @@ jobs:
 
       - name: Build the landscape
         run: landscape2 build --data-file ./landscape.yml --settings-file ./settings.yml --logos-path ./hosted_logos/ --output-dir ./build/
+        env:
+          GITHUB_TOKENS: ${{ secrets.GITHUB_TOKEN }}
+          CRUNCHBASE_API_KEY: ${{ secrets.CRUNCHBASE_API_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
