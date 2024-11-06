@@ -36,7 +36,7 @@ jobs:
       - name: Install landscape2 with cached Homebrew
         uses: tecolicom/actions-use-homebrew-tools@v1
         with:
-          tools: landscape2
+          tools: cncf/landscape2/landscape2
 
       - name: Validate the landscape
         run: |
