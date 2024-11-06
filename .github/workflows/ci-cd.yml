@@ -1,12 +1,12 @@
 name: Validate, build, and deploy the landscape to GitHub Pages
 
 on:
-  push: # Allows you to run this workflow on push events to main
-    branches:
-      - main
-  pull_request: # Allows you to run this workflow on pull requests to main
-    branches:
-      - main
+#  push: # Allows you to run this workflow on push events to main
+#    branches:
+#      - main
+#  pull_request: # Allows you to run this workflow on pull requests to main
+#    branches:
+#      - main
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 permissions: # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
