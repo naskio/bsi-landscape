@@ -52,6 +52,13 @@ landscape:
             twitter: https://twitter.com/runailabs
             crunchbase: https://www.crunchbase.com/organization/run-ai
           - item:
+            name: Slinky
+            homepage_url: https://slinky.ai/
+            repo_url: https://github.com/SlinkyProject/slurm-operator
+            logo: slinky.svg
+            twitter: https://twitter.com/SchedMD
+            crunchbase: https://www.crunchbase.com/organization/schedmd-llc
+          - item:
             name: Volcano
             homepage_url: https://volcano.sh/
             project: incubating
