@@ -1,5 +1,7 @@
 # BSI Landscape
 
+[![CI](https://github.com/naskio/bsi-landscape/actions/workflows/ci.yml/badge.svg)](https://github.com/naskio/bsi-landscape/actions/workflows/ci.yml)
+
 > CNCF > Runtime Technical Advisory Group > Batch System Initiative Working Group
 
 The BSI Landscape is intended as a map of the batch system ecosystem. It is a living document that will be updated as
