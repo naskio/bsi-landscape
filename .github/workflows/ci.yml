@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+  push: # Allows you to run this workflow on push events to main
+    branches:
+      - main
+  pull_request: # Allows you to run this workflow on pull requests to main
+    branches:
+      - main
+
+defaults: # Default to bash
+  run:
+    shell: bash
+
+jobs:
+  test:
+    name: Validate and build the landscape
+    runs-on: macos-latest # we use macOS to have brew installed
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install landscape2 with cached Homebrew
+        uses: tecolicom/actions-use-homebrew-tools@v1
+        with:
+          tools: cncf/landscape2/landscape2
+
+      - name: Validate the landscape
+        run: |
+          landscape2 validate data --data-file ./landscape.yml
+          landscape2 validate settings --settings-file ./settings.yml
+
+      - name: Build the landscape
+        run: landscape2 build --data-file ./landscape.yml --settings-file ./settings.yml --logos-path ./hosted_logos/ --output-dir ./build/
+        env:
+          GITHUB_TOKENS: ${{ secrets.GITHUB_TOKENS }} # or with default token ${{ secrets.GITHUB_TOKEN }}
+          CRUNCHBASE_API_KEY: ${{ secrets.CRUNCHBASE_API_KEY }}
